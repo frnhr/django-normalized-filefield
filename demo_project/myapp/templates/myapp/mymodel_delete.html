@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title_appendix %} - DELETE{% endblock %}
+
+{% block content %}
+    <h2>MyModel - Delete</h2>
+
+    <h3>Confirm</h3>
+    <p>
+        Check yourself before you wreck yourself!<br />
+        Delete {{ object }}?
+    </p>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input type="submit" value="Yes, DELETE!" />
+        <a href="{% url 'mymodel_update' object.id %}">No, GET ME OUT OF HERE!</a>
+    </form>
+{% endblock %}

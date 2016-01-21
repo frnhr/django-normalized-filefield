@@ -1,0 +1,17 @@
+{% extends "myapp/mymodel__form.html" %}
+
+
+{% block title_appendix %} - UPDATE{% endblock %}
+{% block h2 %}MyModel - Update{% endblock %}
+
+{% block heading %}Update {{ object }}{% endblock %}
+
+
+{% block additional_actions %}
+    <li>
+        <a href="{% url 'mymodel_create' %}">Create new</a>
+    </li>
+    <li>
+        <a href="{% url 'mymodel_delete' object.id %}">Delete</a>
+    </li>
+{% endblock additional_actions %}

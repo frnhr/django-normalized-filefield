@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title_appendix %} - LIST{% endblock %}
+
+{% block content %}
+    <h2>MyModel - List</h2>
+    <h3>Actions</h3>
+    <ul>
+        <li>
+            <a href="{% url 'mymodel_create' %}">Create new</a>
+        </li>
+    </ul>
+    <h3>List</h3>
+    <ul>
+        {% for mymodel in object_list %}
+            <li>
+                <a href="{% url 'mymodel_update' mymodel.id %}">{{ mymodel }}</a>
+            </li>
+        {% empty %}
+            <li><em>empty...</em></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
