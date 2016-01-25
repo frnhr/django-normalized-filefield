@@ -2,6 +2,8 @@
 
 File field that behaves as close to other fields as possible.
 
+v. 0.1.0
+
 
 ## Whaat?
 
