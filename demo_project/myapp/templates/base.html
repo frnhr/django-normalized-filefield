@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FileFieldz Demo{% block title_appendix %}{% endblock %}</title>
+    <title>NormalizedFielField Demo{% block title_appendix %}{% endblock %}</title>
+    <style type="text/css">
+        .errorlist li {
+            color: red;
+        }
+    </style>
+    {% block extrahead %}{% endblock %}
 </head>
 <body>
-    <h1>FileFieldz demo</h1>
+    <h1>NormalizedFielField Demo</h1>
     {% if messages %}
         <ul class="messages">
             {% for message in messages %}

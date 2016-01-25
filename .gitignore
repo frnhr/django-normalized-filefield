@@ -135,3 +135,4 @@ Temporary Items
 # Project-specific ignores
 demo_project/db.sqlite3
 demo_project/media
+demo_project/tmp

@@ -2,15 +2,18 @@ from django import forms
 
 from .models import MyModel
 
+from normalized_filefield.form_field import NormalizedFileField
+
 
 class MyModelForm(forms.ModelForm):
 
-    #ac_required_file = ResubmittableAlwaysClearableFileFormField(required=True)
-    #ac_optional_file = ResubmittableAlwaysClearableFileFormField(required=False)
+    # required_file = NormalizedFileField(required=True)
+    # optional_file = NormalizedFileField(required=False)
 
     class Meta:
         model = MyModel
         exclude = ()
         widgets = {
-            #'required_file': DownloadableInMemoryFileInput(),
+            # 'required_file': NormalizedFileInput(),
+            # 'optional_file': NormalizedFileInput(),
         }

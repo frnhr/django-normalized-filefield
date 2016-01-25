@@ -1,5 +1,27 @@
 {% extends "base.html" %}
 
+
+{% block extrahead %}
+    {{ block.super }}
+    <style type="text/css">
+        form > ul.fields {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        form > ul.fields > li:first-child {
+            width: 100%;
+        }
+        form > ul.fields > li {
+            list-style: none;
+            width: 40%;
+            display: inline-block;
+            margin: 0 0 20px 0;
+        }
+    </style>
+{% endblock extrahead %}
+
+
 {% block content %}
     <h2>{% block h2%}{% endblock %}</h2>
     <h3>Actions</h3>
@@ -12,7 +34,9 @@
     <h3>{% block heading %}{% endblock %}</h3>
     <form method="POST" action="" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
+        <ul class="fields">
+            {{ form.as_ul }}
+        </ul>
         <input type="submit" />
     </form>
 {% endblock %}
