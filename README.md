@@ -116,7 +116,7 @@ See `normalized_filefield.widget.VerboseHTMLMixin` for a very verbose markup opt
 
 ## TODO
 
- [ ] File cache storage seems not to clear automatically, 
- [ ] Styleable version, JS 
- [ ] Image Field
- [ ] Clean up the widget and form classes (make more mixin-friendly structure) 
+ - [ ] File cache storage seems not to clear automatically, 
+ - [ ] Styleable version, JS 
+ - [ ] Image Field
+ - [ ] Clean up the widget and form classes (make more mixin-friendly structure) 
