@@ -4,7 +4,7 @@ import pypandoc
 
 
 README = pypandoc.convert('README.md', 'rst')
-version = __import__('normalized_filefield').VERSION
+version = '0.1.1'
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
